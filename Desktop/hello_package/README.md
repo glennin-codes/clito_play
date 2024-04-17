@@ -1,13 +1,13 @@
-#Cargo ,Crates and modules
+# CLIToPlay
+- Play your music on the Terminal
+## procedure
+- git clone 
+- cd clito_play
+- cargo run
 
-├── Cargo.lock
-├── Cargo.toml
-└── src
-    ├── back_of_house.rs
-    ├── front_of_house
-    │   ├── hosting.rs
-    │   ├── mod.rs
-    │   └── serving.rs
-    ├── lib.rs
-    └── main.rs
+![this will be the output](image.png)
+- select your disirable songs to play i.e 1,2,5,7 or type "all" to play all
+- you c
+
+
 
