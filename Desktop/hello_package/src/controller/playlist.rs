@@ -1,11 +1,13 @@
 use std::{collections::VecDeque, io::stdin, path::PathBuf};
 
+use crate::directories::directory;
+
 use super::get_audio_files::all_listed_audio_files;
 #[allow(unused_assignments)]
 
 pub fn create_playlist(files:Vec<PathBuf>)->VecDeque<PathBuf> {
     // Read user input and create a playlist
-    let audio_files: Vec<PathBuf>=all_listed_audio_files();
+    let audio_files: Vec<PathBuf>=all_listed_audio_files(&directory());
     let mut playlist: VecDeque<PathBuf> = VecDeque::new();
     let stdin = stdin();
     let mut input = String::new();
