@@ -1,6 +1,6 @@
-use hello_package::directories::directory;
+use clito_play::directories::directory;
 #[allow(unused_assignments)]
-use hello_package::{controller::get_audio_files::all_listed_audio_files, rust::play};
+use clito_play::{controller::get_audio_files::all_listed_audio_files, rust::play};
 
 
 // const CHUNK_SIZE: usize = 9568; // Set the chunk size to 4096 bytes (4 KB)
