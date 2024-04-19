@@ -1,5 +1,6 @@
 
 pub mod controller;
+pub mod rust;
 pub mod directories{
     use std::{env, path::PathBuf};
 
