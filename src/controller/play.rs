@@ -82,16 +82,14 @@ pub fn play_audios() {
                             if *current_song_guard != current_song {
                                 println!("executed on play");
                                 current_song = *current_song_guard;
-                                println!(" guard :{}", current_song_guard);
-                                println!(" curent song :{}", current_song);
-
+                               
                                 break;
                             }
                         }
                         while sink.empty() == true {
                             println!("Song ended, moving to the next song...");
 
-                            println!("why not executed");
+                            
                             current_song += 1;
                             condvar_clone.notify_one();
                             let mut current_song_guard = current_song_clone.lock().unwrap();
@@ -99,9 +97,7 @@ pub fn play_audios() {
                                 *current_song_guard = current_song;
                                 println!("executed on play");
                                 current_song = *current_song_guard;
-                                println!(" guard :{}", current_song_guard);
-                                println!(" curent song :{}", current_song);
-
+                          
                                 break;
                             }
 
