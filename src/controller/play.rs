@@ -11,7 +11,7 @@ use crate::helpers::file_utils::get_file_name;
 use super::get_audio_files::all_listed_audio_files;
 use super::playlist::create_playlist;
 use crate::helpers::get_directories::directory;
-
+#[allow(unused_mut)]
 pub fn play_audios() {
     //scan and get all audio files from your files system
     let audio_files = all_listed_audio_files(&directory());
@@ -176,6 +176,7 @@ pub fn play_audios() {
                     // Return to default volume
                     volume = 1.0;
                     sink_clone.set_volume(volume);
+                    println!("default vol")
                 }
                 "v+" => {
                     // Increase volume
@@ -192,6 +193,7 @@ pub fn play_audios() {
                     // Return to default speed
                     speed = 1.0;
                     sink_clone.set_speed(speed);
+                    println!("defualt speed set")
                 }
                 "f+" => {
                     // Increase speed
@@ -223,7 +225,7 @@ pub fn play_audios() {
                     println!("n    : Play next song");
                     println!("p    : Play previous song");
                     println!("k    : Toggle play/pause");
-                    println!("r    : Toggle repeat playlist");
+                    // println!("r    : Toggle repeat playlist");
                     println!("fmax : Set to maximum speed supported");
                     println!("help : Show available commands");
                     println!("q    : Quit");
