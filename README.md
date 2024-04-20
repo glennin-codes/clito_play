@@ -35,17 +35,17 @@ Developed with Rust, this tool is not just a music player; it's a testament to t
 
 ### Performance
 
-- **Rust's Efficiency**: Developed in Rust, My CLI Music Player benefits from the language's performance advantages. Rust is known for its speed, safety, and concurrency features, making it an excellent choice for building efficient applications.
-- **Low Resource Usage**: Compared to GUI-based music players, My CLI Music Player uses significantly less system resources, making it ideal for running on systems with limited resources.
+- **Rust's Efficiency**: Developed in Rust, CLIToPlay Music Player benefits from the language's performance advantages. Rust is known for its speed, safety, and concurrency features, making it an excellent choice for building efficient applications.
+- **Low Resource Usage**: Compared to GUI-based music players, CLIToPlay Music Player uses significantly less system resources, making it ideal for running on systems with limited resources.
 
 ### Portability
 
-- **Cross-Platform**: My CLI Music Player is designed to be cross-platform, allowing you to enjoy your music on Windows, macOS, and Linux without any compatibility issues.
-- **Easy Installation**: With Rust's package manager, Cargo, installing My CLI Music Player is straightforward and can be done with a single command.
+- **Cross-Platform**: CLIToPlay Music Player is designed to be cross-platform, allowing you to enjoy your music on Windows, macOS, and Linux without any compatibility issues.
+- **Easy Installation**: With Rust's package manager, Cargo, installing CLIToPlay Music Player is straightforward and can be done with a single command.
 
 ### Customization and Control
 
-- **Custom Commands**: Extend the functionality of My CLI Music Player with custom commands, allowing for a highly personalized experience.
+- **Custom Commands**: Extend the functionality of CLIToPlay Music Player with custom commands, allowing for a highly personalized experience.
 
 
 # How to get started
