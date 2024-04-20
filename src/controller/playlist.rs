@@ -1,6 +1,6 @@
 use std::{collections::VecDeque, io::stdin, path::PathBuf};
 
-use crate::directories::directory;
+use crate::{helpers::get_directories::directory, helpers::file_utils::get_file_name};
 
 use super::get_audio_files::all_listed_audio_files;
 #[allow(unused_assignments)]
@@ -26,7 +26,15 @@ pub fn create_playlist(files:Vec<PathBuf>)->VecDeque<PathBuf> {
 
         playlist = indices.into();
     }
-    println!("{:#?}",playlist);
+    println!("Playlist created with {} songs.", playlist.len());
+    playlist.iter().enumerate().for_each(|(index, path)| {
+        
+        if let Some(file_name) = get_file_name(path) {
+            println!("{}. {}", index + 1, file_name);
+        } else {
+            println!("{}. No name", index + 1);
+        }
+    });
     playlist
 
 }
