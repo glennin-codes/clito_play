@@ -12,6 +12,7 @@ use super::get_audio_files::all_listed_audio_files;
 use super::playlist::create_playlist;
 use crate::helpers::get_directories::directory;
 #[allow(unused_mut)]
+#[allow(unused_assignments)]
 pub fn play_audios() {
     //scan and get all audio files from your files system
     let audio_files = all_listed_audio_files(&directory());
@@ -104,8 +105,7 @@ pub fn play_audios() {
                             println!("{}", current_song);
                         }
                     } else {
-                        println!("executed  else part of loop");
-                        println!("restart playlist {}", restart_playlist);
+                       
                         let mut current_song_guard = current_song_clone.lock().unwrap();
 
                         *current_song_guard = 0;
@@ -178,11 +178,13 @@ pub fn play_audios() {
                     // Increase volume
                     volume = (volume * 2.0).min(2.0); // Ensure volume doesn't exceed 2.0
                     sink_clone.set_volume(volume);
+                    println!("volume set to {}",volume);
                 }
                 "v-" => {
                     // Decrease volume
                     volume = (volume / 2.0).max(0.0); // Ensure volume doesn't go below 0.0
                     sink_clone.set_volume(volume);
+                    println!("volume set to {}",volume);
                 }
                 
                 "f" => {
