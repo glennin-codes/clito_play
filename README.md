@@ -55,19 +55,28 @@ Developed with Rust, this tool is not just a music player; it's a testament to t
 ## Running
 -there are two ways to run the program.
 
-1. Run this  command in the terminal `cargo run  /directory/to/your music-section or any folder with audios` i.e ![cargo run /home/glen/Downloads/](image-2.png).
- - If you what to search from your parent directory all the files i.e `cargo run  /home/`.the cli is able to scan upto all the files in your system ..But considering overhead and if  you have a large disk and low memory system it can be too expensive to expensive best way is by knowing the most actual path to your files.
-2. For experiement  purpose `cd ` inside this project cli_to_play copy your songs to this folder this way i.e ![copying your music file if your wanna test it ](image-3.png).
+1. Run this  command in the terminal `cargo run  /directory/to/your music-section or any folder with audios` 
 
+i.e ![cargo run /home/glen/Downloads/](image-2.png).
+
+ - If you want to search from your parent directory all for  the files  i.e `cargo run  /home/`.the cli is able to scan upto all the files in your system and filter out only the supported audio files ..But considering overhead and if  you have a large disk and a low memory system it can be too expensive sobest way is by knowing the most actual path to your files.
+
+2. For experiement  purpose `cd ` inside this project cli_to_play copy your songs to this folder this way 
+i.e ![copying your music file if your wanna test it ](image-3.png).
+
+- the do `cargo run .`
 3. #### coming soon after  publish the cli . You can  use your os comand for in your terminal to move to the directory which you think may have audio files i.e `cd Music or cd Downloads `  then run the command `cargo run .` 
 
 
-
+### Output
 ![this will be the output](image.png)
 
 - if you get this  error bellow
         
 ![pkconfig errors on linux](image-1.png)
+
+Do the following;
+
 - The error message encountered  is related to the pkg-config tool, which is used to retrieve compiler and linker flags for libraries. In this case, it's trying to find information about the ALSA (Advanced Linux Sound Architecture) library, but it's unable to locate the necessary .pc file.
 
 - Here are a few steps you can try to resolve this issue:
@@ -79,6 +88,8 @@ Developed with Rust, this tool is not just a music player; it's a testament to t
 - On other distributions, the package name may vary (e.g., alsa-lib-devel on Fedora/CentOS).
 
 ## next after a succesful run
+
+### bellow are some of the Playback controls
 
 - select your disirable songs to play i.e 1,2,5,7 or type "all" to play all
 
