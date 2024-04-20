@@ -6,6 +6,7 @@ use super::get_audio_files::all_listed_audio_files;
 #[allow(unused_assignments)]
 
 pub fn create_playlist(files:Vec<PathBuf>)->VecDeque<PathBuf> {
+    
     // Read user input and create a playlist
     let audio_files: Vec<PathBuf>=all_listed_audio_files(&directory());
     let mut playlist: VecDeque<PathBuf> = VecDeque::new();
@@ -23,9 +24,17 @@ pub fn create_playlist(files:Vec<PathBuf>)->VecDeque<PathBuf> {
             .filter(|&idx| idx > 0 && idx <= audio_files.len())
             .map(|idx| audio_files[idx - 1].clone())
             .collect();
+        if indices.is_empty() {
+            eprintln!("Invalid input. Please provide valid indices or 'all'.");
+             return  playlist;
+        }else{
+            playlist = indices.into();
+        }
+    
 
-        playlist = indices.into();
+       
     }
+   
     println!("Playlist created with {} songs.", playlist.len());
     playlist.iter().enumerate().for_each(|(index, path)| {
         
